@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_card"
+    android:layout_marginStart="@dimen/space_small"
+    android:layout_marginEnd="@dimen/space_small"
+    android:layout_marginBottom="@dimen/space_large"
+    android:elevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        android:paddingStart="@dimen/space_normal"
+        android:paddingTop="@dimen/space_normal"
+        android:paddingEnd="@dimen/space_normal"
+        android:paddingBottom="@dimen/space_normal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/type_product_barbecue_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_circle_gray_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/type_item_barbecue_name"
+            style="@style/MeuChurrasco.Text.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_minimun"
+            app:layout_constraintTop_toBottomOf="@+id/type_product_barbecue_icon"
+            app:layout_constraintEnd_toEndOf="@+id/type_product_barbecue_icon"
+            app:layout_constraintStart_toStartOf="@+id/type_product_barbecue_icon"
+            tools:text="Bebida" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_barbecue_name"
+            style="@style/MeuChurrasco.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_normal"
+            app:layout_constraintStart_toEndOf="@+id/type_product_barbecue_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/product_barbecue_amount"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Cerveja" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_barbecue_amount"
+            style="@style/MeuChurrasco.Text.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_normal"
+            android:layout_marginTop="@dimen/space_minimun"
+            app:layout_constraintStart_toEndOf="@+id/type_product_barbecue_icon"
+            app:layout_constraintTop_toBottomOf="@+id/product_barbecue_name"
+            app:layout_constraintBottom_toTopOf="@+id/product_barbecue_sugestion"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="45 litros" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_barbecue_sugestion"
+            style="@style/MeuChurrasco.Text.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_normal"
+            android:layout_marginTop="@dimen/space_minimun"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/type_product_barbecue_icon"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@+id/product_barbecue_amount"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="48 latas 350ml" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_barbecue_amout_price"
+            style="@style/MeuChurrasco.Text.Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/product_barbecue_single_price"
+            app:layout_constraintStart_toStartOf="@+id/product_barbecue_single_price"
+            app:layout_constraintBottom_toTopOf="@+id/product_barbecue_single_price"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="R$ 52,00" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_barbecue_single_price"
+            style="@style/MeuChurrasco.Text.Tips.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/space_minimun"
+            app:layout_constraintTop_toBottomOf="@+id/product_barbecue_amout_price"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="*R$2,20 lata 350ml" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

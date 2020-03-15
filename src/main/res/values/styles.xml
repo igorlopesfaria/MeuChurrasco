@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MeuChurrasco.Text" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textColor">@color/dark</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+    <style name="MeuChurrasco.Text.SplashTitle" parent="MeuChurrasco.Text">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/text_title_splash</item>
+    </style>
+    <style name="MeuChurrasco.Text.SplashSubTitle" parent="MeuChurrasco.Text">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+
+    <style name="MeuChurrasco.Text.Title" parent="MeuChurrasco.Text">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="MeuChurrasco.Text.Subtitle" parent="MeuChurrasco.Text">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="MeuChurrasco.Text.Info" parent="MeuChurrasco.Text">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_info</item>
+    </style>
+
+    <style name="MeuChurrasco.Text.Tips" parent="MeuChurrasco.Text">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_tips</item>
+    </style>
+
+    <style name="MeuChurrasco.Text.Tips.Small" parent="MeuChurrasco.Text.Tips">
+        <item name="android:textSize">@dimen/text_tips_small</item>
+    </style>
+
+    <style name="MeuChurrasco.Edittext.Big" parent="Widget.AppCompat.EditText">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">@dimen/text_title_big</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

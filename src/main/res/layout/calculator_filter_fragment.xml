@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".calculator.filter.CalculatorFilterFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        style="@style/MeuChurrasco.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_small"
+        android:text="@string/how_much_people"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/boy_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/space_medium"
+        android:layout_marginEnd="@dimen/space_extra"
+        android:src="@drawable/ic_boy"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/girl_img"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/girl_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/space_extra"
+        android:layout_marginTop="@dimen/space_medium"
+        android:src="@drawable/ic_girl"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/boy_img"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/count_boy_text"
+        style="@style/MeuChurrasco.Edittext.Big"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:gravity="center"
+        android:hint="0"
+        android:lines="1"
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="@+id/boy_img"
+        app:layout_constraintStart_toStartOf="@+id/boy_img"
+        app:layout_constraintTop_toBottomOf="@+id/boy_img" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/count_girl_text"
+        style="@style/MeuChurrasco.Edittext.Big"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:gravity="center"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="@+id/girl_img"
+        app:layout_constraintStart_toStartOf="@+id/girl_img"
+        app:layout_constraintTop_toBottomOf="@+id/girl_img" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/add_boy_btn"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@+id/count_boy_text"
+        app:layout_constraintEnd_toStartOf="@+id/count_boy_text"
+        app:layout_constraintTop_toBottomOf="@+id/boy_img" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/remove_boy_btn"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_remove"
+        app:layout_constraintBottom_toTopOf="@+id/count_boy_text"
+        app:layout_constraintStart_toEndOf="@+id/count_boy_text"
+        app:layout_constraintTop_toBottomOf="@+id/boy_img" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/add_girl_btn"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@+id/count_girl_text"
+        app:layout_constraintEnd_toStartOf="@+id/count_girl_text"
+        app:layout_constraintTop_toBottomOf="@+id/girl_img" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/remove_girl_btn"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_remove"
+        app:layout_constraintBottom_toTopOf="@+id/count_girl_text"
+        app:layout_constraintStart_toEndOf="@+id/count_girl_text"
+        app:layout_constraintTop_toBottomOf="@+id/girl_img" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView2"
+        style="@style/MeuChurrasco.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_normal"
+        android:gravity="center"
+        android:padding="@dimen/space_small"
+        android:text="@string/how_consume_drink"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count_boy_text" />
+
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/drink_consume_segment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_normal"
+        android:layout_marginStart="@dimen/space_basic"
+        android:layout_marginEnd="@dimen/space_basic"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:textColor="@color/colorPrimary"
+        app:borderColor="@color/colorPrimary"
+        app:borderWidth="1dp"
+        app:divider="@color/colorPrimary"
+        app:dividerPadding="10dp"
+        app:dividerWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2"
+        app:position="0"
+        app:radius="30dp"
+        app:ripple="true"
+        app:rippleColor="@color/colorPrimary"
+        app:selectedBackground="@color/colorPrimary">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/low"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/medium"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/big"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/huge"
+            app:textColor="@color/colorPrimary" />
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView3"
+        style="@style/MeuChurrasco.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_medium"
+        android:gravity="center"
+        android:padding="@dimen/space_small"
+        android:text="@string/how_consume_food"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drink_consume_segment_button" />
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/food_consume_segment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_normal"
+        android:layout_marginStart="@dimen/space_basic"
+        android:layout_marginEnd="@dimen/space_basic"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:textColor="@color/colorPrimary"
+
+        app:borderColor="@color/colorPrimary"
+        app:borderWidth="1dp"
+        app:divider="@color/colorPrimary"
+        app:dividerPadding="10dp"
+        app:dividerWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
+        app:position="0"
+        app:radius="30dp"
+        app:ripple="true"
+        app:rippleColor="@color/colorPrimary"
+        app:selectedBackground="@color/colorPrimary">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/low"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/medium"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/big"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@android:color/white"
+            app:text="@string/huge"
+            app:textColor="@color/colorPrimary" />
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

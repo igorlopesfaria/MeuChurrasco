@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Churras Raiz</string>
+    <string name="title_activity_calculator_acivity">CalculatorAcivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slogan">Sua estimativa correta.</string>
+    <string name="how_much_people">Quantas pessoas?</string>
+    <string name="how_consume_drink">Como é o consumo de bebida?</string>
+    <string name="how_consume_food">Como é o consumo de comida?</string>
+    <string name="low">Baixo</string>
+    <string name="medium">Médio</string>
+    <string name="big">Alto</string>
+    <string name="huge">Exagerado</string>
+
+</resources>
